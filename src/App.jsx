@@ -3,7 +3,7 @@ import "./App.css"
 import {
   Aboutpage,
   Blogpage,
-  Cartpage,
+  CartPage,
   CheckoutPage,
   HomePage,
   ProductDetailpage,
@@ -59,7 +59,7 @@ function App() {
                 />
                 <Route
                   path="/cart"
-                  element={<Cartpage />}
+                  element={<CartPage />}
                 />
                 <Route
                   path="/account"
