@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Roboto";
+}
+
+@layer components {
+    .container {
+        @apply max-w-[1400px] w-full m-auto px-[15px] py-0 overflow-hidden;
+    }
+    .flexCenter {
+        @apply flex justify-center items-center;
+    }
+}
+.track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 9s linear infinite;
+    width: 180%;
+}
+.track:hover {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.btn-wishlist svg {
+    width: 18px;
+    height: 18px;
+}
+.card:hover .btn-wishlist {
+    top: 15px;
+    opacity: 1;
+}
+.card:hover img {
+    transform: scale(1.09);
+    border-radius: 15px;
+}
+.carousel-cell {
+    max-width: 330px;
+}
+
+.flickity-page-dots .flickity-page-dot {
+    background: #ddd;
+}
+.carousel-cell {
+    max-width: 300px;
+}
+
+.flickity-page-dots .flickity-page-dot {
+    background: #ddd;
+}
+
+.flickity-page-dot.is-selected {
+    background: #19f;
+}
+.flickity-button:focus {
+    box-shadow: 0 0 0 3px #19f;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    background: hsl(0 0% 100% / 75%);
+}
+.heart-icon:hover + .text-box {
+    transform: scaleX(1);
+    display: block;
+}
+.ant-picker-large {
+    padding: 4px 11px;
+}
