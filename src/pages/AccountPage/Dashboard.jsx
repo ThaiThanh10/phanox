@@ -18,7 +18,6 @@ const Dashboard = () => {
         const month = date.format("MM")
         const year = date.format("YYYY")
         setUserData({ ...userData, birthDate: `${day}/${month}/${year}` })
-
     }
     const handleSelectCountries = (value, option) => {
         setUserData({ ...userData, provinces: option.label })
@@ -98,8 +97,8 @@ const Dashboard = () => {
                     <Input
                         onChange={handleChange}
                         name="name"
-                        defaultValue={userData.name}
-                        value={userData.name}
+                        defaultValue={userData?.name}
+                        value={userData?.name}
                     />
                 </div>
                 <div className="w-[45%] xs:w-full  ">
@@ -107,8 +106,8 @@ const Dashboard = () => {
                     <Input
                         onChange={handleChange}
                         name="email"
-                        defaultValue={userData.email}
-                        value={userData.email}
+                        defaultValue={userData?.email}
+                        value={userData?.email}
                     />
                 </div>
             </div>
@@ -118,15 +117,15 @@ const Dashboard = () => {
                     <Input
                         onChange={handleChange}
                         name="phone"
-                        defaultValue={userData.phone}
-                        value={userData.phone}
+                        defaultValue={userData?.phone}
+                        value={userData?.phone}
                     />
                 </div>
                 <div className="w-[45%] xs:w-full ">
                     <p className="mb-1">Date of birth</p>
                     <DatePicker
                         defaultValue={dayjs(userData?.birthDate, "DD-MM-YYYY")}
-                        value={dayjs(userData?.birthDate, "DD-MM-YYYY")}
+                        value={userData?.birthDate && dayjs(userData.birthDate, "DD-MM-YYYY")}
                         format={"DD/MM/YYYY"}
                         style={{
                             width: "100%",
@@ -169,7 +168,6 @@ const Dashboard = () => {
                                 userData?.district ? userData.district : "Choose District/Town"
                             }
                             value={userData.district}
-
                             className="xs:w-full sm:w-full md:w-full"
                             style={{
                                 width: 180,
@@ -188,8 +186,7 @@ const Dashboard = () => {
                         <p className="mb-1">Ward</p>
                         <Select
                             defaultValue={userData?.ward ? userData.ward : "Choose Ward"}
-                            value={userData.ward}
-
+                            value={userData?.ward}
                             className="xs:w-full sm:w-full md:w-full"
                             style={{
                                 width: 180,
