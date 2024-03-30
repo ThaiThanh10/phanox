@@ -90,10 +90,11 @@ const MainProvider = ({ children }) => {
         fetchCate()
         dispatch(fetchCart())
         onAuthStateChanged(auth, async (user) => {
+            console.log('🚀user---->', user);
+
             if (user) {
                 setUserInfo(user)
                 getUserData(user.uid)
-
             }
         })
 

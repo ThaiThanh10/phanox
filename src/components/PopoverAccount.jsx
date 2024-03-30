@@ -7,7 +7,7 @@ const PopoverAccount = (props) => {
     const { userInfo, handleSignOut, handleOpenAccount, openAccount, setIsOpenModal } = props
     return (
         <div className="h-[19px] mr-[8px]">
-            {userInfo ? (
+            {Object.keys(userInfo).length ? (
                 <div>
                     <Popover
                         arrow={false}
