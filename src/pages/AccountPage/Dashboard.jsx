@@ -123,7 +123,7 @@ const Dashboard = () => {
                 <div className="w-[45%] xs:w-full ">
                     <p className="mb-1">Date of birth</p>
                     <DatePicker
-                        defaultValue={dayjs(userData?.birthDate, "DD-MM-YYYY")}
+                        defaultValue={userData?.birthDate && dayjs(userData?.birthDate, "DD-MM-YYYY")}
                         value={userData?.birthDate && dayjs(userData.birthDate, "DD-MM-YYYY")}
                         format={"DD/MM/YYYY"}
                         style={{
