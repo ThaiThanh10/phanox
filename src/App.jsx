@@ -8,7 +8,7 @@ import {
   HomePage,
   ProductDetailpage,
   Productpage,
-  AccountPage
+  AccountPage,
 } from "./pages"
 import { Footer, Header } from "./components"
 import MainProvider from "./context/MainContext"
@@ -66,8 +66,8 @@ function App() {
                   element={<AccountPage />}
                 >
                   <Route
+                    path="/account/"
                     index={true}
-                    path="/account/dashboard"
                     element={<Dashboard />}
                   />
                   <Route
