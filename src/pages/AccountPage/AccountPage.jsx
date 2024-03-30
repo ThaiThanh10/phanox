@@ -1,5 +1,4 @@
 import React from "react"
-import Dashboard from "./Dashboard"
 import { Link, Outlet } from "react-router-dom"
 
 const AccountPage = () => {
