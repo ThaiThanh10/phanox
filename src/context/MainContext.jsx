@@ -92,11 +92,8 @@ const MainProvider = ({ children }) => {
         onAuthStateChanged(auth, async (user) => {
             if (user) {
                 setUserInfo(user)
-                try {
-                    await getUserData(user.uid)
-                } catch (error) {
-                    console.error("Error getting user data:", error)
-                }
+                getUserData(user.uid)
+
             }
         })
 

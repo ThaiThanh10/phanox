@@ -46,7 +46,6 @@ const Dashboard = () => {
         const file = ev.target.files
         const blob = new Blob(file)
         const img = URL.createObjectURL(blob)
-        console.log("🚀img---->", img)
         setUserData({ ...userData, img: img })
         setImages(img)
     }
@@ -73,7 +72,7 @@ const Dashboard = () => {
             <div className="test">
                 <div className=" flex flex-col justify-center items-center gap-3 overflow-hidden">
                     <img
-                        src={images}
+                        src={userData?.img || images}
                         alt=""
                         className="object-cover w-[200px] h-[200px] bg-gray-300 rounded-full"
                     />

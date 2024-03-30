@@ -16,7 +16,7 @@ const PopoverAccount = (props) => {
                             <div className="w-[200px] text-center sm:w-[260px] mobile:w-[300px] ">
                                 <Link
                                     to={"/account/dashboard"}
-                                    className="py-[7px] px-[5px] my-2 cursor-pointer xs:w-[25%] block hover:bg-[#f7f7f7]"
+                                    className="py-[7px] px-[5px] my-2 cursor-pointer block hover:bg-[#f7f7f7]"
                                 >
                                     <p className="text  transition-all duration-[0.2s] ease-[ease] ">
                                         Account Details{" "}
@@ -24,7 +24,7 @@ const PopoverAccount = (props) => {
                                 </Link>
                                 <Link
                                     to={"/account/orders"}
-                                    className="py-[7px] px-[5px] my-2 cursor-pointer xs:w-[25%] block hover:bg-[#f7f7f7]"
+                                    className="py-[7px] px-[5px] my-2 cursor-pointer block hover:bg-[#f7f7f7]"
                                 >
                                     <p className="text  transition-all duration-[0.2s] ease-[ease] ">
                                         Orders{" "}
@@ -32,7 +32,7 @@ const PopoverAccount = (props) => {
                                 </Link>
                                 <Link
                                     to={"/account/wishlists"}
-                                    className="py-[7px] px-[5px] my-2 cursor-pointer xs:w-[25%] block hover:bg-[#f7f7f7]"
+                                    className="py-[7px] px-[5px] my-2 cursor-pointer block hover:bg-[#f7f7f7]"
                                 >
                                     <p className="text  transition-all duration-[0.2s] ease-[ease] ">
                                         Wishlists{" "}
