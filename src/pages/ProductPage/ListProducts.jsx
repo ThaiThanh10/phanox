@@ -8,7 +8,7 @@ const ListProducts = (props) => {
         <div className="border-l-[1px] border-solid border-[#ebebeb] pl-[35px] sm:pl-0 lg:pl-0 lg:border-l-0 md:pl-0 md:border-l-0 flex-[0_0_70%] xs:border-l-0 sm:border-l-0 ">
             <div className="flex justify-between items-center xs:flex-col  gap-y-3 px-[55px] mb-[1.5rem] xs:px-3">
                 <h3 className="text-[#1a1a1a] font-normal text-[16px] leading-[1.15] xs:text-[15px]  ">
-                    Showing 9 of 58 Products
+                    Showing 9 of 28 Products
                 </h3>
                 <div>
                     <Select

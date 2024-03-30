@@ -29,7 +29,9 @@ const ResultModal = (props) => {
                         </h1>,
                         <button
                             className="bg-[#f02d34] w-full text-white text-lg font-medium cursor-pointer  mt-7 px-4 py-2.5 transition-all ease duration-200 hover:scale-[1.05] rounded-[15px] border-[none]"
-                            onClick={() => navigate("/productpage")}
+                            onClick={async () => {
+                                await getUserData(userInfo.uid).then(() => navigate("/productpage"))
+                            }}
                         >
                             Continue Buying
                         </button>,
