@@ -73,7 +73,6 @@ const MainProvider = ({ children }) => {
         get(child(dbRef, `user/${uid}`))
             .then((snapshot) => {
                 if (snapshot.exists()) {
-                    console.log(snapshot.val())
                     const data = snapshot.val()
                     setUserData(data)
                 }
@@ -90,14 +89,12 @@ const MainProvider = ({ children }) => {
         fetchCate()
         dispatch(fetchCart())
         onAuthStateChanged(auth, async (user) => {
-            console.log('🚀user---->', user);
+            setUserInfo(user)
 
             if (user) {
-                setUserInfo(user)
                 getUserData(user.uid)
             }
         })
-
     }, [])
     return (
         <MainContext.Provider
@@ -115,7 +112,8 @@ const MainProvider = ({ children }) => {
                 handleSignOut,
                 updateData,
                 userData,
-                setUserData, getUserData
+                setUserData,
+                getUserData,
             }}
         >
             {children}
