@@ -1,10 +1,12 @@
 import { Modal, Result, Spin } from "antd"
-import React from "react"
+import React, { useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import { MainContext } from "../../context/MainContext"
 
 const ResultModal = (props) => {
     const navigate = useNavigate()
     const { order, isModalOpen, handleCancel, viewOrder } = props
+    const { getUserData } = useContext(MainContext)
     return (
         <Modal
             maskClosable={false}
