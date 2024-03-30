@@ -106,7 +106,7 @@ const FormCheckout = (props) => {
                             errors={form.formState.errors}
                             touchedFields={form.formState.touchedFields}
                         />
-                        <div className="flex gap-3 ">
+                        <div className="flex flex-wrap gap-3 xs:flex-col xs:gap-0 ">
                             <InputField
                                 name="visaNumber"
                                 label="Card Information"
