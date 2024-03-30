@@ -66,7 +66,7 @@ function App() {
                   element={<AccountPage />}
                 >
                   <Route
-                    path="/account/"
+                    path="/account/dashboard"
                     index={true}
                     element={<Dashboard />}
                   />
